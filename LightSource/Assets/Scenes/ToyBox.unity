@@ -459,7 +459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &70831178 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419416, guid: 16ca90f758282fa4fb8b0007cec7e9d3, type: 2}
@@ -4161,7 +4161,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 430510, guid: 37e70e062691a324296722d2629c7959, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.29300022
       objectReference: {fileID: 0}
     - target: {fileID: 430510, guid: 37e70e062691a324296722d2629c7959, type: 2}
       propertyPath: m_LocalPosition.y
