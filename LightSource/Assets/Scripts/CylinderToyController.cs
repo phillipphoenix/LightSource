@@ -8,7 +8,9 @@ public class CylinderToyController : MonoBehaviour
     public GameObject player;
     public List<GameObject> cylinders;
     List<Vector3> positions;
+    public bool useSoundEffect = true;
 
+    AudioSource soundEffect;
     bool playerFar;
 
     // Use this for initialization
@@ -23,7 +25,8 @@ public class CylinderToyController : MonoBehaviour
         // Initialise state flag
         playerFar = true;
 
-
+        // Get AudioSource component
+        soundEffect = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,11 @@ public class CylinderToyController : MonoBehaviour
         else if(!playerFar && Vector3.Distance(player.transform.position, transform.position) >= permutationDistance)
         {
             PermutateCylinders();
+            if(useSoundEffect && !soundEffect.isPlaying)
+            {
+                soundEffect.Play();
+            }
+            
             playerFar = true;
         }
     }
